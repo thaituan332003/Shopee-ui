@@ -1,0 +1,262 @@
+.header{
+    height: 120px;
+    background-image: linear-gradient(0 ,#fe6433, #f53e2d );
+}
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.header__navbar-list{
+    list-style: none;
+    padding-left: 0;
+    margin-top: 4px;
+}
+
+.header__navbar-item {
+   margin: 0 8px;
+   position: relative;
+   min-height: 26px;
+    
+}
+
+.header__navbar-item--has-qr:hover .header__qr {
+ display: block;
+}
+
+.header__navbar-item--has-notify:hover .header__notify{
+    display: block;
+}
+
+
+.header__navbar-item ,
+.header__navbar-item-link {
+    display: inline-block;
+    font-size: 0.7rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.header__navbar-item ,
+.header__navbar-item-link,
+.header__navbar-icon-link{
+    display: inline-flex;
+    align-items: center;
+
+}
+
+.header__navbar-item:hover ,
+.header__navbar-icon-link:hover,
+.header__navbar-item-link:hover{
+    cursor: pointer;
+    color: rgba(255, 255 ,255, 0.7);
+}
+
+
+.header__navbar-item--strong{
+    font-weight: 1000;
+}
+.header__navbar-item--separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid #FB9086;
+    height: 16px;
+    right: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+   
+}
+.header__navbar-icon-link{
+    color: var(--white-color);
+    text-decoration: none;
+}
+.header__navbar-ion{
+    font-size: 1rem;
+    margin: 0 4px ;
+}
+.header__navbar-title--no-pointer{
+    cursor: text;
+    color: var(--white-color);
+}
+
+/*HEADER QR CDE*/
+.header__qr{
+    width: 109px;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 120%;
+    padding:8px ;
+    border-radius: 2px;
+    display: none;
+    animation:  fadeIn ease-in 0.3s;
+    }
+
+    .header__qr::before{
+        position: absolute;
+        top: -16px;
+        left: 0;
+        width: 100%;
+        height: 20%;
+        content: "";
+        display: block ;
+    }  
+.header__qr-img{
+    width: 100% ;
+}
+.header__qr-apps{
+   display: flex;
+   justify-content: space-between ;
+}
+.header__qr-link:nth-child(1){
+   margin-left: 0px;
+}
+.header__qr-link:nth-child(2){
+    margin-left: 0px;
+ }
+.header__qr-dowload-img{
+  height: 12px;
+}
+
+
+/*HEADER notification*/
+.header__notify{
+position: absolute;
+top: 120%;
+right: 0;
+width: 330px;
+border: 1px solid #D3D3D3;
+background-color: var(--white-color);
+cursor: default;
+transform-origin: calc(100% - 20px) top ;
+animation: headerNotifyGrowth ease-in 0.25s;
+will-change: opacity, transform;
+display: none;
+}
+
+.header__notify::before{
+    content: "";
+    border-width: 19px 20px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 4px;
+    top: -30px;
+}
+
+.header__notify::after{
+    content: "";
+    display:block;
+    position: absolute;
+    top: -16px;
+    right: 0;
+    width: 90px;
+    height: 20px;
+}
+
+
+@keyframes headerNotifyGrowth{
+    from{
+        opacity: 0;
+          transform: scale(0);
+    }
+    to {
+        opacity: 1;
+          transform: scale(1);
+    }
+}
+
+.header__notify-header{
+  height: 40px;
+  background-color: var(--white-color);
+}
+
+.header__notify-header h3{
+color: #999;
+margin: 0 0 0 12px;
+font-weight: 400;
+font-size: 0.8rem;
+line-height: 40px;
+user-select: none;
+}
+
+.header__notif-list{
+ padding-left: 0;
+}
+.header__notif-item{
+   display: flex;
+}
+.header__notif-item:hover{
+    background-color: #f7f7f7;
+}
+
+.header__notif-item--viewed{
+    background-color: rgba(238, 75 , 43,0.09);
+
+
+}
+
+
+.header__notif-link{
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+    }
+
+.header__notif-img{
+width: 40px;
+object-fit: contain;
+}
+
+.header__notif-info{
+margin-left: 12px;
+}
+.header__notif-name{
+display: block;
+font-size: 1rem;
+color: var(--text-color);
+font-weight: 400;
+line-height: 1.3rem;
+}
+.header__notif-descriotion{
+    display: block;
+    font-size: 0.7rem;
+    color: #756F6E ;
+    line-height: 1.3rem;
+    margin-top: 4px;
+
+}
+
+.header__notify-footer{
+    display: flex;
+     
+}
+
+.header__notify-footer-btn{
+    text-decoration: none;
+    color: var(--text-color);
+    width: 100%;
+    padding: 8px 0;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+
+/* Authen modal*/
+
+.auth-forn__container{
+    padding: 0 32px ;
+}
+
+.auth-form__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.auth-form__heading{
+    font-size: 2.2rem;
+    font-weight: 400;
+}
