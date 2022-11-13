@@ -1,5 +1,5 @@
 .header{
-    height: 120px;
+    height: var(--header-height);
     background-image: linear-gradient(0 ,#fe6433, #f53e2d );
 }
 .header__navbar{
@@ -9,7 +9,7 @@
 .header__navbar-list{
     list-style: none;
     padding-left: 0;
-    margin-top: 4px;
+    margin: 4px 0 0;
 }
 
 .header__navbar-item {
@@ -182,7 +182,8 @@ user-select: none;
 }
 
 .header__notif-list{
- padding-left: 0;
+    padding-left: 0;
+  
 }
 .header__notif-item{
    display: flex;
@@ -245,6 +246,13 @@ line-height: 1.3rem;
 
 /* Authen modal*/
 
+.auth-form{
+    width: 500px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: var(--white-color);
+}
+
 .auth-forn__container{
     padding: 0 32px ;
 }
@@ -253,10 +261,345 @@ line-height: 1.3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0  12px;
+    margin-top: 12px;
 
 }
 
 .auth-form__heading{
-    font-size: 2.2rem;
+    font-size: 1.2rem;
     font-weight: 400;
+    color: var(--text-color);
+}
+
+.auth-form__switch-btn{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+
+.auth-form__input{
+    width: 100%;
+    height: 34px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    outline: none;
+}
+
+.auth-form__input:focus{
+    border-color: #888;
+}
+
+.auth-form__aside{
+    margin-top: 18px ;
+}
+
+.auth-form__ppolicy-text{
+    font-size: 0.8rem;
+    line-height: 1rem;
+    text-align: center;
+    padding: 0 12px;
+}
+
+.auth-form__text-link{
+color: var(--primary-color);
+text-decoration: none;
+}
+.auth-form__controls{
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__controls-back{
+    margin-right: 8px;
+}
+
+.auth-form__socials{
+    background-color: #F5F5F5;
+    padding: 16px 36px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+}
+
+.auth-form__socials-icon{
+    font-size: 1.2rem;
+}
+
+.auth-form__socials--facebook {
+    color: var(--white-color);
+    background-color: #3A5A98;
+}
+
+.auth-form__socials--facebook 
+.auth-form__socials-icon{
+    color: var(--white-color);
+}
+.auth-form__socials-title{
+    margin: 0 30px;
+    
+}
+.auth-form__socials--google{
+    background-color: var(--white-color);
+}
+
+.auth-form__help{
+    display: flex;
+    justify-content: flex-end;
+}
+.auth-form__help-link{
+    font-size: 0.8rem;
+    text-decoration: none ;
+    color: #939393;
+}
+
+.auth-form__help-separate{
+    display: block;
+    height: 21px;
+    margin: 0px 16px 0 ;
+    border-left: 1px solid #EAEAEA;
+}
+
+.auth-form__help-forgot{
+    color: var(--primary-color);
+}
+
+
+/* Header with search*/
+.header-with-search{
+ height: var(--header-with-search-height);
+ display: flex;
+ align-items: center;
+ margin: 0 8px;
+
+}
+
+.header__logo{
+    width:200px ;
+}
+.header__logo-img{
+    width: 120px;
+    margin: 15px 30px 34px;
+}
+
+.header__search{
+    flex: 1;
+    height: 40px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+}
+.header__cart{
+    width: 155px;
+    text-align: center;
+    position: relative;
+}
+.header__cart-icon{
+    font-size: 1.5rem;
+    color: var(--white-color); 
+}
+
+.header__cart-list{
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 58px;
+    background-color: var(--white-color);
+    width: 400px;
+    border-radius:2px;
+    box-shadow: 0 1px 3.125rem 0  rgba(0, 0 , 0 , 0.2);
+}
+
+.header__cart-list--bo-cart{
+    padding: 7px 0 ;
+}
+
+
+.header__cart-no-cart-img{
+    width: 60%;
+}
+
+.header__cart-list-no-cart-msg{
+    display: block;
+    font-size: 1rem;
+    color: var(--text-color);
+    margin-top: 12px;
+}
+   
+
+/*Header search*/
+.header__search-input-wrap{
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+.header__search-input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    padding: 0 16px;
+    border-radius: 4px;
+}
+
+.header__search-select{
+    border-left: 1px solid #E8E8E8;
+    padding-left: 16px;
+    position: relative;
+    cursor: pointer;
+   
+}
+
+.header__search-select-label{
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.header__search-select-icon{
+    font-size: 0.9rem;
+    color: #4A4A4A ;
+    margin: 0 16px 0 8px;
+    position: relative;
+    top: 1px;
+}
+
+.header__search-btn{
+   background-color: var(--primary-color);
+   border: none;
+   height: 34px;
+   width: 50px;
+   border-radius: 3px;
+   margin-right: 3px;
+   outline: none;
+
+}
+
+.header__search-btn:hover{
+    cursor: pointer;
+    background-color: #fb6445;
+}
+
+.header__search-btn-icon{
+     font-size: 0.8rem;
+     color: var(--white-color);
+}
+
+.header__search-select:hover .header__search-option{
+   display: block;
+
+}
+
+.header__search-option{
+ position: absolute;
+ right: 0;
+ top:100%;
+ width: 120px;
+ list-style: none;
+ box-shadow: 0 1px 2px #ccc ;
+ padding-left: 0;
+ border-radius: 2px;
+ display: none;
+ animation: fadeIn ease-in 0.2s;
+}
+
+.header__search-option::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top : -10px;
+    left: 0;
+}
+
+.header__search-option-item{
+   background-color: var(--white-color);
+   padding: 8px 8px;
+ 
+}
+.header__search-option-item:first-child{
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.header__search-option-item:hover{
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+.header__search-option-item span{
+  font-size: 0.9rem;
+  color: var(--text-color) ;
+  margin-left: 8px;
+}
+
+.header__search-option-item i{
+   font-size: 0.7rem;
+   color: var(--primary-color);
+   margin-left: 12px;
+   display: none;
+}
+
+.header__search-option-item--active i{
+    display: inline-block;
+}
+
+.header__search-input:focus ~ .header__search-history{
+      display: block;
+}
+
+/* Search history*/
+.header__search-history{
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    width: calc(100% - 16px);
+    background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 1px 5px #999;
+    display: none;
+    overflow: hidden;
+}
+
+.header__search-history-heading{
+    margin:  8px 12px;
+    font-size: 1rem;
+    color: #999;
+    font-weight: 400;
+}
+
+.header__search-history-list{
+    padding-left: 0;
+    list-style: none;
+    margin : 8px 0 0;
+}
+
+.header__search-history-item{
+    height: 38px;
+    padding: 0 12px;
+}
+
+.header__search-history-item:last-child{
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.header__search-history-item:hover{
+    background-color: #fafafa;
+}
+
+.header__search-history-item a{
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 38px;
+    color: var(--text-color);
+    display: block;
 }
