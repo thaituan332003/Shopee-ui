@@ -21,7 +21,7 @@ htlm{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
-
+ /*Responsive*/
 .grid{
     width: 1200px;
     max-width: 100%;
@@ -35,6 +35,20 @@ htlm{
 .grid__row{
     display: flex;
     flex-wrap: wrap;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+/*Test */
+.grid__column-2{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
+.grid__column-10{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3334%
 }
 
 
@@ -90,7 +104,7 @@ htlm{
 
 /* Button style */
 .btn{
-    min-width: 142px;
+    min-width: 105px;
     height: 36px;
     text-decoration: none;
     border: none;
@@ -100,10 +114,11 @@ htlm{
     outline: none ;
     cursor: pointer;
     color: var(--text-color);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     line-height: 0.8rem;
+    
     
 }
 
